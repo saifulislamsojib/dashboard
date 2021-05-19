@@ -1,0 +1,27 @@
+.inner-active {
+  color: #673ab7 !important;
+  position: relative;
+}
+.inner-active::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  background-color: #673ab7;
+  height: 4.5px;
+  width: 100px;
+  border-radius: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.access-control-nav a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.primary-btn {
+  background-color: #673ab7;
+  color: #fff;
+}
+.primary-btn:hover {
+  color: #fff;
+}
