@@ -10,7 +10,7 @@ import './Header.css';
 const Header = () => {
     return (
         <Container className="sticky-top" fluid>
-            <Navbar>
+            <Navbar style={{backgroundColor: '#fff'}}>
                 <Navbar.Brand as={Link} to='/' className='navbar-heading d-flex align-items-center'>
                     <img className='mr-2' src={logo} alt="" />
                     <span>MYSITE</span>
