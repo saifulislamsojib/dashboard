@@ -7,7 +7,7 @@ const permissions = [
     'Delete items in access'
 ]
 
-const RowDetails = ({accessLevel, setChecked}) => {
+const RowDetails = ({accessLevel, setChecked, id}) => {
 
     const [access, setAccess] = useState(accessLevel);
 
@@ -24,14 +24,14 @@ const RowDetails = ({accessLevel, setChecked}) => {
                     <div className="col-md-5">
                         <h6>Access Control</h6>
                             <div className="mt-3 form-check">
-                                <input className="form-check-input" type="radio" name="flexRadioDefault" id="All Access" checked={access==='All Access'} onChange={handleAccess} />
-                                <label className="form-check-label" htmlFor="All Access">
+                                <input className="form-check-input" type="radio" name={`flexRadioDefault${id}`} id={`all-access${id}`} checked={access===`all-access${id}`} onChange={handleAccess} />
+                                <label className="form-check-label" htmlFor={`all-access${id}`}>
                                 All Access <small className="text-muted d-block">Can access all items</small>
                                 </label>
                             </div>
                             <div className="mt-3 form-check">
-                                <input className="form-check-input" type="radio" name="flexRadioDefault" id="Restricted Access" checked={access==='Restricted Access'} onChange={handleAccess} />
-                                <label className="form-check-label" htmlFor="Restricted Access">
+                                <input className="form-check-input" type="radio" name={`flexRadioDefault${id}`} id={`restricted-access${id}`} checked={access===`restricted-access${id}`} onChange={handleAccess} />
+                                <label className="form-check-label" htmlFor={`restricted-access${id}`}>
                                     Restricted Access <small className="text-muted d-block">Can access only assigned or created items</small>
                                 </label>
                             </div>

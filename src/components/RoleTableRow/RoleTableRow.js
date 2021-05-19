@@ -10,7 +10,7 @@ const RoleTableRow = ({role, another}) => {
 
     const history = useHistory();
 
-    const {name, accessLevel, members, summary, updated} = role;
+    const {name, accessLevel, members, summary, updated, id} = role;
 
     const [checked, setChecked] = useState(accessLevel!=='No Access');
 
@@ -55,7 +55,7 @@ const RoleTableRow = ({role, another}) => {
                     }
                 </td>
             </tr>
-            {showDetails&&<RowDetails accessLevel={accessLevel} setChecked={setChecked} />}
+            {showDetails&&<RowDetails accessLevel={accessLevel} setChecked={setChecked} id={id} />}
         </>
     );
 };
