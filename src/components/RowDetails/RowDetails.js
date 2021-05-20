@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const permissions = [
     'View items in access',
@@ -7,15 +7,8 @@ const permissions = [
     'Delete items in access'
 ]
 
-const RowDetails = ({accessLevel, setChecked, id}) => {
-
-    const [access, setAccess] = useState(accessLevel);
-
-    const handleAccess = (e) => {
-        setAccess(e.target.id);
-        setChecked(true)
-    }
-
+const RowDetails = ({access, id, handleAccess}) => {
+    
     return (
         <tr className="border">
             <td colSpan="5">

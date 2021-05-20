@@ -30,6 +30,13 @@ const RoleTableRow = ({role, another}) => {
         
     }
 
+    const [access, setAccess] = useState(accessLevel.toLowerCase().split(' ').join('-')+id);
+
+    const handleAccess = (e) => {
+        setAccess(e.target.id);
+        setChecked(true)
+    }
+
     return (
         <>
             <tr onClick={handleClick} role="button" className='border'>
@@ -55,7 +62,7 @@ const RoleTableRow = ({role, another}) => {
                     }
                 </td>
             </tr>
-            {showDetails&&<RowDetails accessLevel={accessLevel} setChecked={setChecked} id={id} />}
+            {showDetails&&<RowDetails handleAccess={handleAccess} access={access} id={id} />}
         </>
     );
 };
