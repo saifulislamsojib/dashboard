@@ -44,8 +44,8 @@ const RowDetails = ({accessLevel, setChecked, id}) => {
                         {
                             permissions.map((permission, index) => (
                                 <div key={index} className="form-check mt-3">
-                                    <input className="form-check-input" type="checkbox" id={`flexCheckDefault${index+3}`} />
-                                    <label className="form-check-label" htmlFor="flexCheckDefault3">
+                                    <input className="form-check-input" type="checkbox" id={`flexCheckDefault${index}${id}`} />
+                                    <label className="form-check-label" htmlFor={`flexCheckDefault${index}${id}`}>
                                         {permission}
                                     </label>
                                 </div>
